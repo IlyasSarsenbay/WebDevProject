@@ -1,0 +1,20 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Align items horizontally */
+  }
+  
+  nav ul li {
+    margin: 0 10px; /* Add some spacing between list items */
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav ul li a:hover {
+    color: #666;
+  }

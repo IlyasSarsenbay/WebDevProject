@@ -1,0 +1,42 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './pages/homepage/header/header.component';
+import { HomepageComponent } from './pages/homepage/homepage/homepage.component';
+import { MovieListComponent } from './pages/movie-list/movie-list.component';
+import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { LoginpageComponent } from './pages/loginpage/loginpage.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { AuthInterceptor } from './services/AuthInterceptor';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomepageComponent,
+    MovieListComponent,
+    MovieDetailsComponent,
+    LoginpageComponent,
+    SignupComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi:true
+    }
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

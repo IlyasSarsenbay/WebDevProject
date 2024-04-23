@@ -1,0 +1,22 @@
+<div>
+    <div class="header">
+        <h1>Films</h1>
+    </div>
+
+    <div class="container">
+        <div class="list">
+            <div *ngFor="let movie of movies" class = "movie-card">
+                <div class = "card-image">
+                    <img [src] = "movie.posterImageUrl" [alt] = "movie.title" style="width: 200px;"/>
+                </div>
+                <div class = "description">
+                    <h3>
+                        <a [title]="movie.title + ' details'"
+                        [routerLink]="['/most-popular', movie.id]">
+                        {{ movie.title }}
+                        </a>
+                    </h3>
+            </div>
+        </div>   
+    </div>
+</div>

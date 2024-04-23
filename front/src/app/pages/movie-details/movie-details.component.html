@@ -1,0 +1,28 @@
+<div *ngIf="movie" class="movie-details-container">
+    <!-- Poster Section (25%) -->
+    <div class="poster-section">
+      <img [src]="movie.posterImageUrl" alt="Movie Poster">
+    </div>
+  
+    <!-- Movie Details (50%) -->
+    <div class="details-section">
+      <div class="title-description">
+        <h1>{{ movie.title }}</h1>
+        <p>{{ movie.description }}</p>
+        <div class="buttons">
+          <button mat-button color="primary">Watch</button>
+          <button mat-button color="primary">Rate</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Movie Info (25%) -->
+    <div class="info-section">
+      <ul>
+        <li><strong>Release Date:</strong> {{ movie.release_date | date }}</li>
+        <li><strong>Duration:</strong> {{ movie.duration }} minutes</li>
+        <li><strong>Rating:</strong> {{ movie.average_rating }}</li>
+      </ul>
+    </div>
+  </div>
+  
