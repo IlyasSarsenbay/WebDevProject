@@ -19,9 +19,9 @@ def login(request):
     if user is not None:
         django_login(request, user)
         refresh = RefreshToken.for_user(user)
-        return Response({'refresh': str(refresh), 'access': str(refresh.access_token)})
+        return Response({'refresh': str(refresh), 'access': str(refresh.access_token), 'result': True})
     else:
-        return Response({'error': 'Invalid credentials'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'error': 'Invalid credentials', 'result': False}, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['POST'])
@@ -75,7 +75,7 @@ class CompanyRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CompanySerializer
 
 class MovieList(APIView):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
 
     def get(self, request):
         movies = Movie.objects.all()
@@ -90,7 +90,7 @@ class MovieList(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class MovieDetail(APIView):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
 
     def get_object(self, pk):
         try:
