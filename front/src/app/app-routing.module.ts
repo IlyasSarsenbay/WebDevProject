@@ -5,17 +5,18 @@ import { MovieListComponent } from './pages/movie-list/movie-list.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { RatingComponent } from './pages/rating/rating.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   // { path: 'genres', component: GenresComponent },
   // { path: 'companies', component: CompaniesComponent },
   // { path: 'top-movies', component: TopMoviesComponent },
+  { path: 'myratings', component: RatingComponent },
   { path: 'most-popular', component: MovieListComponent },
   { path: 'most-popular/:movieId', component: MovieDetailsComponent },
   { path: 'login', component: LoginpageComponent },
   { path: 'signup', component: SignupComponent },
-
 ];
 
 @NgModule({

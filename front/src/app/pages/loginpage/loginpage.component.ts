@@ -17,12 +17,12 @@ export class LoginpageComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   onLogin() {
-    //debugger;
+    debugger;
     this.http.post('http://127.0.0.1:8000/api/login/', this.loginObj).subscribe(
       (res:any)=>{
         if(res.result){
           alert('Successfully loged in!')
-          localStorage.setItem('loginToken', res.token);
+          localStorage.setItem('loginToken', res.access);
           this.router.navigateByUrl('');
         }
         else{

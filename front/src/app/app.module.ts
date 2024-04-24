@@ -12,6 +12,8 @@ import { MovieDetailsComponent } from './pages/movie-details/movie-details.compo
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { AuthInterceptor } from './services/AuthInterceptor';
+import { RatingComponent } from './pages/rating/rating.component';
+import { GenreListComponent } from './pages/genre-list/genre-list.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { AuthInterceptor } from './services/AuthInterceptor';
     MovieListComponent,
     MovieDetailsComponent,
     LoginpageComponent,
-    SignupComponent
+    SignupComponent,
+    RatingComponent,
+    GenreListComponent
   ],
   imports: [
     BrowserModule,
