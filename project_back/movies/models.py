@@ -10,7 +10,6 @@ class Genre(models.Model):
 
 class MovieManager(models.Manager):
     def get_long_movies(self):
-        # Return movies with duration greater than 120 minutes
         return self.filter(duration__gt=120)
     
 class Company(models.Model):
@@ -25,7 +24,7 @@ class Movie(models.Model):
     description = models.TextField()
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     release_date = models.DateField()
-    duration = models.IntegerField()  # Duration in minutes
+    duration = models.IntegerField()  
     director = models.CharField(max_length=255)
     cast = models.TextField()
     poster_image_url = models.URLField()
@@ -33,7 +32,6 @@ class Movie(models.Model):
     average_rating = models.DecimalField(max_digits=3, decimal_places=1, default=0.0)
     total_ratings = models.IntegerField(default=0)
     company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='movies', null=True, default=None)
-    # Attach the custom manager to the Movie model
     objects = MovieManager()
 
     def __str__(self):
