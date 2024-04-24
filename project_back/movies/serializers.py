@@ -38,4 +38,3 @@ class RatingSerializer(serializers.Serializer):
         instance.rating_value = validated_data.get('rating_value', instance.rating_value)
         instance.save()
         return instance
-
