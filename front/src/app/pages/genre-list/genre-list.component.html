@@ -1,7 +1,12 @@
-<div *ngFor="let genre of genres" class="genre">
-    <h3 class="genre-name">
-      <a [routerLink]="['/movies', genre.name]">{{ genre.name }}</a>
-    </h3>
-    <p class="genre-description">{{ genre.description }}</p>
-  </div>
-  
+<div class = "container">
+  <h1 class = "header">Genres</h1>
+      <div *ngFor="let genre of genres" class="genre-card">
+          <!-- <img src="{{movie.poster_image_url}}" alt="movie image"> -->
+          <div class = "description">
+              <h3 class = "genre-name">
+                <a [routerLink]="['/movies']" [queryParams]="{ genre: genre.name }">{{ genre.name }}</a>
+              </h3>
+              <p class="genre-description">{{ genre.description }}</p>
+  </div>   
+</div>
+</div>

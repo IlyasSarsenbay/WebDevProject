@@ -1,60 +1,52 @@
 .movie-details-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .poster-section {
-    flex: 1;
-    max-width: 25%;
-  }
-  
-  .poster-section img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .details-section {
-    flex: 1;
-    max-width: 50%;
-    padding: 0 20px;
-  }
-  
-  .title-description {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .buttons {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .info-section {
-    flex: 1;
-    max-width: 25%;
-  }
-  
-  @media (max-width: 768px) {
-    .movie-details-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .poster-section, .details-section, .info-section {
-      max-width: 100%;
-    }
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
 
-  .rate-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-left: 20px; /* Adjust margin as needed */
-  }
-  
-  .form-group {
-    margin-bottom: 10px;
-  }
-  
+.poster-section {
+  flex: 1;
+  max-width: 30%;
+}
+
+.poster-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.details-section {
+  flex: 1;
+  max-width: 70%;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.info-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-section ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.rate-form {
+  /* display: none; */
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}

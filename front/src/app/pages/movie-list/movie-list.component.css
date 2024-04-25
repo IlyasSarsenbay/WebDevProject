@@ -21,6 +21,16 @@
     border-radius: 8px;
     background-color: #ffffff;
     text-align: center;
+    font-family: Arial, sans-serif; /* Use the same font family as in the genres */
+    font-size: 15px; /* Use the same font size as in the genres */
+    line-height: 1.4; /* Adjust line height for better readability */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .movie-card img {
@@ -30,7 +40,6 @@
 }
 
 .movie-card h3 {
-    font-size: 16px;
     margin-bottom: 5px;
 }
 
@@ -39,6 +48,29 @@
     margin-bottom: 10px;
 }
 
+
+
+.movie-card img {
+    height: 230px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.rating {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
 .movie-card .movie-title {
     font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+a:hover {
+    color: #C06B3E;
 }

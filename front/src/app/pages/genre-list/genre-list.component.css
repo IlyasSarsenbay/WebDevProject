@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.genre-card {
+    width: 220px;
+    height: 340px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.genre-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.genre-card img {
+    height: 180px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.genre-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.genre-card .genre-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.genre-card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.genre-card a:hover {
+    color: #C06B3E;
+}
