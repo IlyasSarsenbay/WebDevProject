@@ -1,20 +1,104 @@
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Align items horizontally */
-  }
-  
-  nav ul li {
-    margin: 0 10px; /* Add some spacing between list items */
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  nav ul li a:hover {
-    color: #666;
-  }
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-image: url('https://cdn.musebycl.io/styles/large_wide/s3/2021-05/50-posters-final-hed-2021.jpg?itok=qz3IxSGD'); */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  position: relative; 
+}
+
+.navbar a {
+  color:white;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #C06B3E
+}
+
+header {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-image: url('https://cdn.musebycl.io/styles/large_wide/s3/2021-05/50-posters-final-hed-2021.jpg?itok=qz3IxSGD');
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+  /* background-color: rgba(0, 0, 0, 1); */
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+.navbar .menu-links {
+  display: flex;
+  gap:40px;
+}
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 101;
+}
+
+.hero-section .content {
+  color:#fff;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 101;
+}
+
+.hero-section .content h1{
+  font-size: 2rem;
+  max-width: 600px;
+  z-index: 101;
+}
+
+.hero-section .content button {
+  background: #fff;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 38px;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-section .content button:hover {
+  color: #fff;
+  background:#C06B3E;
+}   

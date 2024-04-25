@@ -6,7 +6,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './pages/homepage/header/header.component';
-import { HomepageComponent } from './pages/homepage/homepage/homepage.component';
 import { MovieListComponent } from './pages/movie-list/movie-list.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
@@ -20,13 +19,12 @@ import { GenreListComponent } from './pages/genre-list/genre-list.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomepageComponent,
     MovieListComponent,
     MovieDetailsComponent,
     LoginpageComponent,
     SignupComponent,
     RatingComponent,
-    GenreListComponent
+    GenreListComponent,
   ],
   imports: [
     BrowserModule,

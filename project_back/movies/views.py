@@ -63,7 +63,11 @@ class MovieList(APIView):
     #permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        movies = Movie.objects.all()
+        genre = request.query_params.get('genre', None)
+        if genre:
+            movies = Movie.objects.filter(genre__name=genre)
+        else:
+            movies = Movie.objects.all()
         serializer = MovieSerializer(movies, many=True)
         return Response(serializer.data)
 

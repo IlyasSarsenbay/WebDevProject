@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Movie } from '../../models/movie';
 import { MovieService } from '../../services/movie.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
@@ -9,15 +10,29 @@ import { MovieService } from '../../services/movie.service';
 })
 export class MovieListComponent {
   movies: Movie[] = [];
-  constructor(private movieService: MovieService) { }
+  filteredMovies: Movie[] = [];
+  genre: string = '';
+
+  constructor(private movieService: MovieService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getMovies();
+    this.route.queryParams.subscribe(params => {
+      this.genre = params['genre'] || '';
+      this.fetchMovies();
+    });
   }
 
-  getMovies(): void {
-    this.movieService.getMovies()
-      .subscribe(movies => this.movies = movies);
+  fetchMovies(): void {
+    if (this.genre && this.genre !== '') {
+      this.movieService.getMoviesByGenre(this.genre).subscribe(movies => {
+        this.movies = movies;
+        this.filteredMovies = this.movies;
+      });
+    } else {
+      this.movieService.getMovies().subscribe(movies => {
+        this.movies = movies;
+        this.filteredMovies = this.movies;
+      });
+    }
   }
-
 }
