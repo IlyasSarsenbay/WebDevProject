@@ -13,10 +13,9 @@ const routes: Routes = [
   // { path: 'companies', component: CompaniesComponent },
   // { path: 'top-movies', component: TopMoviesComponent },
   { path: 'myratings', component: RatingComponent },
-  { path: 'most-popular', component: MovieListComponent },
-  { path: 'most-popular/:movieId', component: MovieDetailsComponent },
+  { path: 'movies', component: MovieListComponent },
+  { path: 'movies/:movieId', component: MovieDetailsComponent },
   { path: 'login', component: LoginpageComponent },
-  { path: 'signup', component: SignupComponent },
 ];
 
 @NgModule({

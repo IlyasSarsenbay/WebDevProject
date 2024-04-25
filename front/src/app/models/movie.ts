@@ -10,8 +10,8 @@ export interface Movie {
     duration: number;
     director: string;
     cast: string[];
-    posterImageUrl: string;
-    trailerUrl: string;
+    poster_image_url: string;
+    trailer_url: string;
     average_rating: number;
     total_ratings: number;
     company: Company;

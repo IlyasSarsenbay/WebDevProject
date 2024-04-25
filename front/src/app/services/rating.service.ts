@@ -29,4 +29,8 @@ export class RatingService {
   deleteRating(id: number): Observable<any> {
     return this.http.delete(this.apiUrl + `ratings/${id}/`);
   }
+
+  getUserId(): Observable<any> {
+    return this.http.get(this.apiUrl + `userid`);
+  }
 }

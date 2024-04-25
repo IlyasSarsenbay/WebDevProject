@@ -22,7 +22,7 @@ export class LoginpageComponent {
       (res:any)=>{
         if(res.result){
           alert('Successfully loged in!')
-          localStorage.setItem('loginToken', res.access);
+          localStorage.setItem('loginToken', res.token);
           this.router.navigateByUrl('');
         }
         else{
@@ -31,5 +31,4 @@ export class LoginpageComponent {
       }
     )
   }
-
 }

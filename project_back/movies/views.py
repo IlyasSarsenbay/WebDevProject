@@ -9,6 +9,12 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, login as django_login, logout as django_logout
 from django.http import Http404
 # Function Based Views (FBV)
+
+# @api_view(['GET'])
+# def get_current_user_id(request):
+#     user_id = request.user.id
+#     return Response({'user_id': user_id})
+
 @api_view(['GET', 'POST'])
 def genre_list(request):
     if request.method == 'GET':
@@ -54,7 +60,7 @@ class CompanyRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CompanySerializer
 
 class MovieList(APIView):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
 
     def get(self, request):
         movies = Movie.objects.all()
@@ -69,7 +75,7 @@ class MovieList(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class MovieDetail(APIView):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
 
     def get_object(self, pk):
         try:
